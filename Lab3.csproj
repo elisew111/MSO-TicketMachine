@@ -37,6 +37,15 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoinPurchase.cs" />
+    <Compile Include="CreditPurchase.cs" />
+    <Compile Include="DebitPurchase.cs" />
+    <Compile Include="GetPrice.cs" />
+    <Compile Include="HandlePayment.cs" />
+    <Compile Include="IKEAAdapter.cs" />
+    <Compile Include="Purchase.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="TicketList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI.cs">
