@@ -6,3 +6,9 @@ C:\Users\elise\OneDrive\Documenten\Gametech\MSO\lab3\mso-lab3-master\obj\x86\Deb
 C:\Users\elise\OneDrive\Documenten\Gametech\MSO\lab3\mso-lab3-master\obj\x86\Debug\Lab3.pdb
 C:\Users\Frans Zoetmulder\Desktop\MSO-TicketMachine\obj\x86\Debug\Lab3.exe
 C:\Users\Frans Zoetmulder\Desktop\MSO-TicketMachine\obj\x86\Debug\Lab3.pdb
+C:\Users\elise\Documenten\GitHub\MSO-NS\obj\x86\Debug\Lab3.csprojResolveAssemblyReference.cache
+C:\Users\elise\Documenten\GitHub\MSO-NS\obj\x86\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\elise\Documenten\GitHub\MSO-NS\obj\x86\Debug\Lab3.exe
+C:\Users\elise\Documenten\GitHub\MSO-NS\obj\x86\Debug\Lab3.pdb
+C:\Users\elise\Documenten\GitHub\MSO-NS\bin\Debug\Lab3.exe
+C:\Users\elise\Documenten\GitHub\MSO-NS\bin\Debug\Lab3.pdb

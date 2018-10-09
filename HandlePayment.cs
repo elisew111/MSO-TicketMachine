@@ -7,28 +7,27 @@ namespace Lab3
 {
     public class HandlePayment
     {
-        
+
         public HandlePayment(UIInfo info)
         {
             switch (info.Payment)
             {
                 case UIPayment.CreditCard:
-                    CreditPurchase();
+                    //CreditPurchase();
                     break;
                 case UIPayment.DebitCard:
-                    DebitPurchase();
-                   
+                    //DebitPurchase();
                     break;
-                case  UIPayment.Cash:
-                    CoinPurchase();
-                    
+                case UIPayment.Cash:
+                    //CoinPurchase();
+
                     break;
-                default: break; 
+                default: break;
             }
-            
+
         }
 
-
+    }
 }
    //     			switch (info.Payment) {
 			//case UIPayment.CreditCard:

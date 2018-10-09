@@ -28,9 +28,11 @@ namespace Lab3
             HandlePayment h = new HandlePayment(info);
 
             TicketList TL = new TicketList();
-            
 
-			// We have a handlepayment class now
+            //maar nu kunnen er dus nog steeds geen meerdere... hoe fixen we dat?
+            Ticket t = new Ticket(info);
+
+            TL.AddTicket(t);
 
 		}
 
