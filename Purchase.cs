@@ -1,29 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Windows.Forms;
 
 namespace Lab3
 {
     class Purchase
     {
+        protected string name;
+
+
         public void Connect()
-        { }
+        {
+            MessageBox.Show("Connecting to " + name);
+        }
+
         public void Disconnect()
-        { }
+        {
+            MessageBox.Show("Disconnecting from " + name);
+        }
         public int BeginTransaction(float amount)
         {
-            return 0;
+            MessageBox.Show("Begin transaction 1 of " + amount + " EUR");
+            return 1;
         }
         public bool EndTransaction(int id)
         {
-            return false;
+            if (id != 1)
+                return false;
+
+            MessageBox.Show("End transaction 1");
+            return true;
         }
         public void CancelTransaction(int id)
-        { }
+        {
+            if (id != 1)
+                throw new Exception("Incorrect transaction id");
 
-        //c.Connect ();
-        //		int ccid = c.BeginTransaction(price);
-        //c.EndTransaction (ccid);
+            MessageBox.Show("Cancel transaction 1");
+        }
+
+        public void Buy (float price)
+        {
+            Connect();
+            int id = BeginTransaction(price);
+            EndTransaction(id);
+        }
+        
     }
 }

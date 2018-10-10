@@ -5,21 +5,27 @@ using System.Text;
 
 namespace Lab3
 {
-    public class HandlePayment
+    class HandlePayment
     {
 
-        public HandlePayment(UIInfo info)
+        public HandlePayment(UIInfo info, TicketList TL)
         {
+
+            float price = TL.totalPrice;
+
             switch (info.Payment)
             {
                 case UIPayment.CreditCard:
-                    //CreditPurchase();
+                    CreditPurchase cp = new CreditPurchase();
+                    cp.Buy(price + 0.5f);
                     break;
                 case UIPayment.DebitCard:
-                    //DebitPurchase();
+                    DebitPurchase dp = new DebitPurchase();
+                    dp.Buy(price);
                     break;
                 case UIPayment.Cash:
-                    //CoinPurchase();
+                    IKEAAdapter ikea = new IKEAAdapter();
+                    ikea.Buy(price);
 
                     break;
                 default: break;

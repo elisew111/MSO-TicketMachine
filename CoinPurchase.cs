@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Lab3
 {
-    class CoinPurchase
+    class CoinPurchase : IKEAAdapter
     {
+        
     }
 }

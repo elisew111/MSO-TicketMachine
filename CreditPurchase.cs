@@ -5,7 +5,14 @@ using System.Text;
 
 namespace Lab3
 {
-    class CreditPurchase
+    class CreditPurchase : Purchase
     {
+        public CreditPurchase()
+        {
+            this.name = "credit card reader";
+
+            
+
+        }
     }
 }

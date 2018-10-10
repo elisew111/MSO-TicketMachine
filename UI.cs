@@ -25,7 +25,7 @@ namespace Lab3
 
 		private void PaymentExecution(UIInfo info)
 		{
-            HandlePayment h = new HandlePayment(info);
+            
 
             TicketList TL = new TicketList();
 
@@ -34,7 +34,9 @@ namespace Lab3
 
             TL.AddTicket(t);
 
-		}
+            HandlePayment h = new HandlePayment(info, TL);
+
+        }
 
 #region Set-up -- don't look at it
 		private void initializeControls()
