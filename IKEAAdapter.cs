@@ -3,44 +3,23 @@ using System.Windows.Forms;
 
 namespace Lab3
 {
-    class IKEAAdapter : IKEAMyntAtare2000
+    class IKEAAdapter : Purchase
     {
-        public void Connect()
+        IKEAMyntAtare2000 ikea = new IKEAMyntAtare2000();
+
+        public override void Start()
         {
-            starta();
+            ikea.starta();
         }
 
-        public void Disconnect()
+        public override void Pay(float price)
         {
-            stoppa();
+            ikea.betala((int)price);
         }
 
-        public int BeginTransaction(float amount)
+        public override void Stop()
         {
-            betala((int) amount);
-            return 1;
-        }
-        public bool EndTransaction(int id)
-        {
-            if (id != 1)
-                return false;
-
-            MessageBox.Show("End transaction 1");
-            return true;
-        }
-        public void CancelTransaction(int id)
-        {
-            if (id != 1)
-                throw new Exception("Incorrect transaction id");
-
-            MessageBox.Show("Cancel transaction 1");
-        }
-
-        public void Buy(float price)
-        {
-            Connect();
-            int id = BeginTransaction(price);
-            EndTransaction(id);
+            ikea.stoppa();
         }
     }
 }

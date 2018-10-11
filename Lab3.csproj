@@ -37,9 +37,8 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CoinPurchase.cs" />
-    <Compile Include="CreditPurchase.cs" />
-    <Compile Include="DebitPurchase.cs" />
+    <Compile Include="CreditAdapter.cs" />
+    <Compile Include="DebitAdapter.cs" />
     <Compile Include="GetPrice.cs" />
     <Compile Include="HandlePayment.cs" />
     <Compile Include="IKEAAdapter.cs" />

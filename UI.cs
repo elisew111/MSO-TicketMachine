@@ -23,9 +23,9 @@ namespace Lab3
 			initializeControls ();
 		}
 
-		private void PaymentExecution(UIInfo info)
-		{
-            
+        private void PaymentExecution(UIInfo info)
+        {
+
 
             TicketList TL = new TicketList();
 
@@ -34,8 +34,22 @@ namespace Lab3
 
             TL.AddTicket(t);
 
-            HandlePayment h = new HandlePayment(info, TL);
+            HandlePayment handle = new HandlePayment();
 
+            switch (info.Payment)
+            {
+                case UIPayment.CreditCard:
+                    handle.setPurchase(new CreditAdapter());
+                    break;
+                case UIPayment.DebitCard:
+                    handle.setPurchase(new DebitAdapter());
+                    break;
+                case UIPayment.Cash:
+                    handle.setPurchase(new IKEAAdapter());
+                    break;
+            }
+
+            handle.DoPayment(TL.totalPrice);
         }
 
 #region Set-up -- don't look at it

@@ -7,31 +7,20 @@ namespace Lab3
 {
     class HandlePayment
     {
+        private Purchase purchase;
 
-        public HandlePayment(UIInfo info, TicketList TL)
+        public void setPurchase (Purchase _purchase)
         {
-
-            float price = TL.totalPrice;
-
-            switch (info.Payment)
-            {
-                case UIPayment.CreditCard:
-                    CreditPurchase cp = new CreditPurchase();
-                    cp.Buy(price + 0.5f);
-                    break;
-                case UIPayment.DebitCard:
-                    DebitPurchase dp = new DebitPurchase();
-                    dp.Buy(price);
-                    break;
-                case UIPayment.Cash:
-                    IKEAAdapter ikea = new IKEAAdapter();
-                    ikea.Buy(price);
-
-                    break;
-                default: break;
-            }
-
+            this.purchase = _purchase;
         }
+
+        public void DoPayment(float price)
+        {
+            purchase.Start();
+            purchase.Pay(price);
+            purchase.Stop();
+        }
+       
 
     }
 }
